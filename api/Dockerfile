@@ -1,6 +1,11 @@
-FROM python:3.9
+FROM python:3.9-alpine
 
 WORKDIR /app
+
+RUN apk add --no-cache --virtual .build-deps \
+    ca-certificates gcc postgresql-dev linux-headers musl-dev \
+    libffi-dev jpeg-dev zlib-dev \
+    && pip install -r requirements.txt
 
 COPY requirements.txt /app/
 RUN pip install -r requirements.txt

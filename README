@@ -1,0 +1,17 @@
+Update run.sh with needed env variables
+
+Needed env variables:
+    POSTGRES_USER,
+    POSTGRES_PASSWORD,
+    POSTGRES_DB
+
+run `./run.sh` to start the sensor db and server in docker containers
+
+Quick bash startup script:
+```
+export POSTGRES_USER=
+export POSTGRES_PASSWORD=
+export POSTGRES_DB=
+
+{repo_path}/scripts/run.sh
+```

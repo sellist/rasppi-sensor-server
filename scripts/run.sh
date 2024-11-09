@@ -19,11 +19,6 @@ fi
 
 git pull
 
-if ! command -v docker &> /dev/null; then
-    echo "Docker is not installed. Please install Docker and try again."
-    exit 1
-fi
-
 if ! systemctl is-active --quiet docker; then
     echo "Starting Docker..."
     sudo systemctl start docker

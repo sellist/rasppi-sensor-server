@@ -5,6 +5,9 @@ Needed env variables:
     POSTGRES_PASSWORD,
     POSTGRES_DB
 
+build docker images with `docker build ./api/`
+build docker images with `docker build ./db/`
+
 run `./run.sh` to start the sensor db and server in docker containers
 
 Quick bash startup script:
@@ -15,3 +18,4 @@ export POSTGRES_DB=
 
 {repo_path}/scripts/run.sh
 ```
+

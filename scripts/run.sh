@@ -25,5 +25,3 @@ if ! systemctl is-active --quiet docker; then
 fi
 
 docker-compose -f ./scripts/compose.yml up -d
-
-docker rmi "$(docker images -f "dangling=true" -q)"

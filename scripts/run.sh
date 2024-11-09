@@ -7,8 +7,13 @@ if [ -z "$POSTGRES_USER" ] || [ -z "$POSTGRES_PASSWORD" ] || [ -z "$POSTGRES_DB"
     exit 1
 fi
 
+# check if this script is in correct directory
+
+cd "$(dirname "$0")" || exit
+cd ..
+
 if [ ! -d ".git" ]; then
-    echo "This script must be run from the root of the repository."
+    echo "This script must be run from the scripts directory"
     exit 1
 fi
 

@@ -30,6 +30,6 @@ docker build -t db -f Dockerfile .
 docker stop db api
 docker rm db api
 
-docker-compose -f compose.yml up -d
+docker-compose -f ./scripts/compose.yml up -d
 
 docker rmi "$(docker images -f "dangling=true" -q)"

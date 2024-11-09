@@ -24,12 +24,6 @@ if ! systemctl is-active --quiet docker; then
     sudo systemctl start docker
 fi
 
-docker build -t api -f Dockerfile .
-docker build -t db -f Dockerfile .
-
-docker stop db api
-docker rm db api
-
 docker-compose -f ./scripts/compose.yml up -d
 
 docker rmi "$(docker images -f "dangling=true" -q)"

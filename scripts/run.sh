@@ -19,12 +19,6 @@ fi
 
 git pull
 
-git fetch --tags
-latestTag=$(git describe --tags `git rev-list --tags --max-count=1`)
-echo "Latest tag: $latestTag"
-
-git checkout $latestTag
-
 if ! command -v docker &> /dev/null; then
     echo "Docker is not installed. Please install Docker and try again."
     exit 1

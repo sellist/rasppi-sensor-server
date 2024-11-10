@@ -32,16 +32,16 @@ if ! docker --version; then
 fi
 
 # bring old images down if any
-docker-compose -f compose.yml down
+docker compose -f compose.yml down
 
 # pull the latest changes
 git pull
 
 # build the images
-docker-compose -f compose.yml build
+docker compose -f compose.yml build
 
 # run the containers
-docker-compose -f compose.yml up -d
+docker compose -f compose.yml up -d
 
 # delete old images only if they are api or db images
 docker image prune -f --filter "label=service=api"

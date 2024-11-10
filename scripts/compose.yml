@@ -12,6 +12,8 @@ services:
       - pg_data:/var/lib/postgresql/data
     networks:
       - app-network
+    ports:
+      - "5432:5432"
     restart: always
 
   api:
@@ -28,6 +30,11 @@ services:
 
 networks:
   app-network:
+    driver_opts:
+      com.docker.network.bridge.host_binding_ipv4: "172.20.0.1"
+    ipam:
+      config:
+        - subnet: "172.20.0.0/16"
 
 volumes:
   pg_data:

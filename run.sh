@@ -31,11 +31,6 @@ if ! docker --version; then
     exit 1
 fi
 
-if ! docker-compose --version; then
-    echo "Docker Compose is not installed"
-    exit 1
-fi
-
 # bring old images down if any
 docker-compose -f compose.yml down
 

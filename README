@@ -1,21 +1,11 @@
-Update run.sh with needed env variables
+API for taking in sensor data and storing it in a database
 
 Needed env variables:
-    POSTGRES_USER,
-    POSTGRES_PASSWORD,
-    POSTGRES_DB
-
-build docker images with `docker build ./api/`
-build docker images with `docker build ./db/`
-
-run `./run.sh` to start the sensor db and server in docker containers
-
-Quick bash startup script:
-```
-export POSTGRES_USER=
-export POSTGRES_PASSWORD=
-export POSTGRES_DB=
-
-{repo_path}/scripts/run.sh
-```
-
+    DJANGO_SECRET_KEY=
+    DJANGO_ALLOWED_HOSTS=
+    SQL_ENGINE=
+    SQL_DATABASE=
+    SQL_USER=
+    SQL_PASSWORD=
+    SQL_HOST=
+    SQL_PORT=

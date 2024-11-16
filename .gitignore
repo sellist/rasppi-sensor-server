@@ -139,3 +139,4 @@ dmypy.json
 cython_debug/
 .idea
 /.idea
+/api/src/set_env.sh
